@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Paola Terán, maquilladora, estilista y manicurista profesional. Servicios de calidad con pasión por las redes sociales.">
+    <title>Paola Terán - Estilista, Maquilladora y Manicurista</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e91e63, #c2185b);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            animation: fadeInDown 1s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            text-align: center;
+            background-color: #f8bbd0;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e91e63;
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #e91e63;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .services,
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery a {
+            display: block;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .gallery a:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+
+        .floating-icons a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #e91e63;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-size: 24px;
+            transition: background-color 0.3s ease;
+        }
+
+        .floating-icons a:hover {
+            background-color: #c2185b;
+        }
+
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #e91e63, #c2185b);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: fadeInUp 1s ease-in-out;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Paola Terán - Estilista, Maquilladora y Manicurista</h1>
+    </header>
+
+    <nav>
+        <a href="#about">Quién Soy</a>
+        <a href="#services">Servicios</a>
+        <a href="#gallery">Galería</a>
+        <a href="#whatsapp">Agendar Hora</a>
+    </nav>
+
+    <section id="about">
+        <h2>Quién Soy</h2>
+        <p>Paola Terán es maquilladora profesional con más de 6 años de experiencia. Apasionada por la belleza y las
+            redes sociales, ha trabajado con diversas marcas y campañas como creadora de contenido, realizando reels,
+            videos de reseñas y primeras impresiones.</p>
+        <p>Siempre en constante capacitación, se esfuerza por mejorar su perfil y brindar servicios de alta calidad en
+            estilismo, maquillaje y manicura. En su Instagram, puedes encontrar muchas fotos de su trabajo.</p>
+        <img src="https://i.postimg.cc/fzyQrN65/458507881-485863214213913-4684020368633785175-n.jpg"
+            alt="Foto de la madre de Paola Terán" width="300"
+            style="border-radius: 15px; margin-top: 20px; animation: fadeInUp 1s ease-in-out;">
+    </section>
+
+    <section id="services">
+        <h2>Servicios</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Estilismo</h3>
+                <p>Corte de cabello, peinados, alisados, ondas y más.</p>
+            </div>
+            <div class="service-card">
+                <h3>Maquillaje</h3>
+                <p>Maquillajes para eventos, bodas, sesiones fotográficas y más.</p>
+            </div>
+            <div class="service-card">
+                <h3>Manicurismo</h3>
+                <p>Diseño de uñas, uñas acrílicas, gelish y otros servicios.</p>
+            </div>
+            <div class="service-card">
+                <h3>Lashista</h3>
+                <p>Aplicación de pestañas postizas, lifting y más.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galería</h2>
+        <p>Aquí puedes ver algunos ejemplos de mi trabajo. Visita mi Instagram para más fotos y detalles.</p>
+
+        <h3>Manicurismo</h3>
+        <div class="gallery">
+            <a href="https://i.postimg.cc/J7Xgf4K3/u-as.jpg" data-lightbox="gallery"
+                data-title="Trabajo de manicurismo">
+                <img src="https://i.postimg.cc/J7Xgf4K3/u-as.jpg" alt="Trabajo de manicurismo">
+            </a>
+            <a href="https://i.postimg.cc/7hrBH0X3/u-a1.jpg" data-lightbox="gallery"
+                data-title="Trabajo de manicurismo">
+                <img src="https://i.postimg.cc/7hrBH0X3/u-a1.jpg" alt="Trabajo de manicurismo">
+            </a>
+            <a href="https://i.postimg.cc/BQgh38FF/image.png" data-lightbox="gallery"
+                data-title="Trabajo de manicurismo">
+                <img src="https://i.postimg.cc/BQgh38FF/image.png" alt="Trabajo de manicurismo">
+            </a>
+        </div>
+
+        <h3>Estilismo</h3>
+        <div class="gallery">
+            <a href="https://i.postimg.cc/PqLK12Rb/image.png" data-lightbox="gallery" data-title="Trabajo de estilismo">
+                <img src="https://i.postimg.cc/PqLK12Rb/image.png" alt="Trabajo de estilismo">
+            </a>
+            <a href="https://i.postimg.cc/y8Gy608D/image.png" data-lightbox="gallery" data-title="Trabajo de estilismo">
+                <img src="https://i.postimg.cc/y8Gy608D/image.png" alt="Trabajo de estilismo">
+            </a>
+        </div>
+
+        <h3>Pestañas</h3>
+        <div class="gallery">
+            <a href="https://i.postimg.cc/DzbdSmSB/image.png" data-lightbox="gallery" data-title="Trabajo de pestañas">
+                <img src="https://i.postimg.cc/DzbdSmSB/image.png" alt="Trabajo de pestañas">
+            </a>
+            <a href="https://i.postimg.cc/ZRtPpZ3Z/image.png" data-lightbox="gallery" data-title="Trabajo de pestañas">
+                <img src="https://i.postimg.cc/ZRtPpZ3Z/image.png" alt="Trabajo de pestañas">
+            </a>
+            <a href="https://i.postimg.cc/0QYYC3dS/image.png" data-lightbox="gallery" data-title="Trabajo de pestañas">
+                <img src="https://i.postimg.cc/0QYYC3dS/image.png" alt="Trabajo de pestañas">
+            </a>
+        </div>
+
+        <h3>Maquillajes</h3>
+        <div class="gallery">
+            <a href="https://i.postimg.cc/d3J8NB4x/image.png" data-lightbox="gallery"
+                data-title="Trabajo de maquillaje">
+                <img src="https://i.postimg.cc/d3J8NB4x/image.png" alt="Trabajo de maquillaje">
+            </a>
+            <a href="https://i.postimg.cc/Wp7mFB4L/image.png" data-lightbox="gallery"
+                data-title="Trabajo de maquillaje">
+                <img src="https://i.postimg.cc/Wp7mFB4L/image.png" alt="Trabajo de maquillaje">
+            </a>
+            <a href="https://i.postimg.cc/mgK7WRmM/image.png" data-lightbox="gallery"
+                data-title="Trabajo de maquillaje">
+                <img src="https://i.postimg.cc/mgK7WRmM/image.png" alt="Trabajo de maquillaje">
+            </a>
+        </div>
+    </section>
+
+    <section id="whatsapp">
+        <h2>Agendar Hora</h2>
+        <p>¿Quieres agendar una hora? ¡Contáctame directamente por WhatsApp!</p>
+        <a href="https://wa.me/56972440974?text=¡Hola%20Paola!%20Quisiera%20agendar%20una%20hora%20para%20uno%20de%20tus%20servicios."
+            class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
+        </a>
+    </section>
+
+    <div class="floating-icons">
+        <a href="https://www.instagram.com/pao_terann/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/56972440974?text=¡Hola%20Paola!%20Quisiera%20saber%20más%20sobre%20los%20servicios%20y%20precios%20que%20ofreces."
+            target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Paola Terán | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+
+</html>
